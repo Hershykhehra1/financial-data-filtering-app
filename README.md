@@ -37,6 +37,7 @@ Ensure you have the following installed on your system:
    ```bash
    npm install
    ```
+   Ensure that you have axois installed, if not you can install it by doing using command:```bash npm install axios```
 
 3. **Add Environment Variables**:
    Create a `.env` file in the root of the project and add your API key:
