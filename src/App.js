@@ -45,13 +45,13 @@ const App = () => {
       filtered = filtered.filter((item) => item.revenue <= revenueRange[1]);
     }
 
-    //filtering from the min revenue range
+    //filtering from the min net income range
     if(netIncomeRange[0]) {
       //filter through the items
       filtered = filtered.filter((item) => item.netIncome >= netIncomeRange[0]);
       }
 
-      //filtering from the max revenue range
+      //filtering from the max net income range
     if(netIncomeRange[1]) {
       //filter through the items
       filtered = filtered.filter((item) => item.netIncome <= netIncomeRange[1]);
@@ -66,7 +66,7 @@ const App = () => {
           Financial Data Filtering App
         </h1>
         <h2 className="text-3xl font-extrabold text-gray-400 mb-6 text-center">
-          Apple (AAPL)
+          Apple Inc (AAPL)
         </h2>
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="lg:w-1/3 bg-gray-500 p-6 rounded-lg shadow-md">
