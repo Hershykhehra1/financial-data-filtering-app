@@ -1,6 +1,11 @@
 import React from 'react';
 
 const Table = ({ data }) => {
+
+    const formatNumber = (number) => {
+        return Number(number).toLocaleString();
+    };
+
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -17,12 +22,12 @@ const Table = ({ data }) => {
         <tbody className="text-white">
           {data.map((item, index) => (
             <tr key={index} className={`${index % 2 === 0 ? "bg-gray-700" : "bg-gray-500"} hover:bg-gray-800`}>
-              <td className="border px-4 py-2">{item.date}</td>
-              <td className="border px-4 py-2">{item.revenue}</td>
-              <td className="border px-4 py-2">{item.netIncome}</td>
-              <td className="border px-4 py-2">{item.grossProfit}</td>
-              <td className="border px-4 py-2">{item.eps}</td>
-              <td className="border px-4 py-2">{item.operatingIncome}</td>
+              <td className="border px-4 py-2">{formatNumber(item.date)}</td>
+              <td className="border px-4 py-2">{formatNumber(item.revenue)}</td>
+              <td className="border px-4 py-2">{formatNumber(item.netIncome)}</td>
+              <td className="border px-4 py-2">{formatNumber(item.grossProfit)}</td>
+              <td className="border px-4 py-2">{formatNumber(item.eps)}</td>
+              <td className="border px-4 py-2">{formatNumber(item.operatingIncome)}</td>
             </tr>
           ))}
         </tbody>
