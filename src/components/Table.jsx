@@ -3,7 +3,7 @@ import React from 'react';
 const Table = ({ data }) => {
 
     const formatNumber = (number) => {
-        return Number(number).toLocaleString();
+        return '$' + Number(number).toLocaleString();
     };
 
   return (
